@@ -1,0 +1,114 @@
+---
+import logo from '../assets/taylor-violet ross-logo.png';
+const {active} = Astro.props;
+---
+
+<header class="header-container">
+    <div class="navbar-container">
+        <div class="navbar-logo-container">
+            <img class = "navbar-logo" src={logo.src} />
+        </div>
+        <nav id="navbar-main" class="navbar-main" role="navigation"> 
+            <ul class ="navbar-list">
+                <li id="navbar-item-home" class =`navbar-item `>
+                    <a class = `navbar-link ${active === "HOME" ? "active" : ""}` href="/">HOME</a>
+                </li>
+                <li id="navbar-item-about" class ="navbar-item">
+                    <a class = `navbar-link ${active === "ABOUT" ? "active" : ""}` href="/about/" >ABOUT</a>
+                </li>
+                <li id="navbar-item-projects" class ="navbar-item"> 
+                    <a class = `navbar-link ${active === "PROJECTS" ? "active" : ""}` href="/projects/">FORENSIC ART</a>
+                </li>
+                <li id="navbar-item-resume" class ="navbar-item"> 
+                    <a class = "navbar-link" >OTHER WORKS</a>
+                </li>
+                <li id="navbar-item-resume" class ="navbar-item"> 
+                    <a class = "navbar-link">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:wght@100..900&display=swap');
+    .header-container
+    {
+        width:100%;
+        text-align: center;
+        
+    }
+    .navbar-container
+    {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-evenly;
+        width:100%;
+        background-color: #C4B5FD;
+    }
+    .navbar-logo-container
+    {
+        display: flex;
+        justify-content: center;
+        margin-top:2rem;
+     
+    }
+    .navbar-logo
+    {
+        width:100%;
+        height: auto;
+    }
+    .navbar-main
+    {
+        margin-top:0.5rem;
+     
+    }
+    .navbar-list
+    {
+ 
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .navbar-item
+    {
+        list-style: none;
+        display: inline-block;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        font-size: 1.45rem;
+        font-weight: 400;
+        cursor: pointer;
+        color:#66329d;
+        font-family: "Roboto", serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+        opacity:70%;
+        & >a
+        {
+            color:#66329d;
+            text-decoration: none;
+            &.active
+            {
+                font-weight: 900;
+                color:#2c1744;
+           
+                text-decoration: underline;
+                text-decoration-color: #2c1744;
+                text-decoration-thickness: 0.2rem;
+                text-underline-offset:0.3rem;
+                opacity:100%;
+            }
+            &:hover:not(.active)
+            {
+                cursor: pointer;
+                color:#412164;
+                opacity:100%;
+            }
+        }
+    }
+</style>
+
