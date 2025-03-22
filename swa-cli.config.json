@@ -4,6 +4,7 @@
     "taylorrenegade": {
       "appLocation": ".",
       "outputLocation": "./dist",
+      "appBuildCommand": "npm run build",
       "run": "npm run dev",
       "appDevserverUrl": "http://localhost:4321"
     }
