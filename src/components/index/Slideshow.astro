@@ -1,25 +1,26 @@
 ---
-
+import slide1 from '/src/assets/slides/slide1.webp'
+import slide2 from '/src/assets/slides/slide2.webp'
+import slide3 from '/src/assets/slides/slide3.webp'
+import slide4 from '/src/assets/slides/slide4.webp'
 ---
 
 
 <section class ="index-slideshow">
   <div class="index-slideshow-container">
     <div class="index-slideshow-image-item current-slide">
-      <img class="index-slideshow-image" src="https://placehold.co/1000x400/black/white?text=Sample+Image+1" style="width:100%;">
+      <img class="index-slideshow-image" src={slide1.src} style="width:100%;  opacity:90%;">
     </div>
     <div class="index-slideshow-image-item">
-      <img class="index-slideshow-image" src="https://placehold.co/1000x400/black/white?text=Sample+Image+2" style="width:100%;">
+      <img class="index-slideshow-image" src={slide2.src} style="width:100%;">
     </div>
     <div class="index-slideshow-image-item">
-      <img class="index-slideshow-image" src="https://placehold.co/1000x400/black/white?text=Sample+Image+3" style="width:100%;">
-    </div>
-    <!-- <div class="index-slideshow-image-item">
-      <img class="index-slideshow-image" src={image.src}  style="width:100%;">
+      <img class="index-slideshow-image" src={slide3.src} style="width:100%; opacity:75%;">
     </div>
     <div class="index-slideshow-image-item">
-      <img class="index-slideshow-image" src={image.src} style="width:100%;">
-    </div> -->
+      <img class="index-slideshow-image" src={slide4.src} style="width:100%;">
+    </div>
+
 </div>
   <button class="prev" onclick="slideShowControl(`prev`)" >&#10094;</button>
   <button class="next" onclick="slideShowControl(`next`)" >&#10095;</button>
@@ -48,8 +49,12 @@
 .index-slideshow-image-item
 {
   display:none;
-  width:100%
+  width:100%;
+  background:black;
+
 }
+
+
 .current-slide
 {
   display: block;
@@ -66,14 +71,21 @@
     font-weight: bold;
     background-color: black;
     opacity: 50%;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 15% 15% 0;
     user-select: none;
     -webkit-user-select: none;
+    cursor:pointer;
+    border:none;
+
+    &:hover
+    {
+      opacity:100%;
+    }
 }
 .next 
 {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 15% 0 0 15%;
 }
 .fade-out
 {

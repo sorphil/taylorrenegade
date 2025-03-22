@@ -1,0 +1,38 @@
+---
+
+import Header from '/src/components/Header.astro';
+import ProjectLayout from '/src/layouts/ProjectLayout.astro';
+import MainImage from '/src/assets/fa-images/fa-00/fa-00.png'
+const images = await Astro.glob("/src/assets/fa-images/fa-00/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`FORENSIC ART`/>
+    <ProjectLayout 
+        title=`A History of Misrepresentation; Centering Trans-Feminine Identities within Craniofacial Approximations (MSc Dissertation)`
+        year=`2024`
+        subtitle=`Materials: Geomagic Freeform, 3D Printed Models, Procreate, Adobe Illustrator, Acrylic Paint`
+        text1=`In forensic science, the identification of human remains often relies on clear and binary categorizations, 
+        but often people's identities and senses of self cannot be contained to simple black-and-white answers. 
+        Moreover, this binary system fails to account for the complexities of transgender identities, posing significant challenges 
+        to identification. Sex estimation affects the language used to describe remains which in turn influences forensic art. 
+        Forensic artists, particularly those working in craniofacial approximations, strive to accurately recreate an individual's 
+        appearance to aid in their identification. To aid in a successful identification many different pieces of information are needed, 
+        and an omission or oversight can hinder this. This is further compacted by the fact that even when information about the transgender 
+        identity of an individual is made available to the forensic artist, there are no current standards for creating a trans-inclusive 
+        approximation. This, as well as a history of disregarding or lacking knowledge on these signs, can lead to inaccurate and 
+        disrespectful representations (Tallmana, Kincera, Plemons, 2021; Redgrave, 2018).`
+        
+        text2=`This project aims to propose new standards for conducting craniofacial approximations that respect and 
+        appropriately reflect trans-feminine identities. By applying masculine, feminine, and gender-neutral craniofacial 
+        approximation standards to the same male skull, the project will compare the outcomes and how these different gendered 
+        standards affect the final approximations. This will hopefully help establish guidelines for suspected trans-feminine 
+        remains; an identity that is underrepresented in current forensic standards and research.`
+        mainImage={MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+

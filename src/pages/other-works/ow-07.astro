@@ -1,0 +1,25 @@
+---
+
+import Header from '/src/components/Header.astro';
+import ProjectLayout from '/src/layouts/ProjectLayout.astro';
+import MainImage from '/src/assets/ow-images/ow-07/ow-07.jpg'
+const images = await Astro.glob("/src/assets/ow-images/ow-07/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`OTHER WORKS`/>
+    <ProjectLayout 
+        title=`They Both Die At The End`
+        year=`2020`
+        subtitle=`Materials: Cut and Dyed Paper, Paste, Alcohol Markers, Watercolour Dye`
+        text1=`This project is an exploration of one of my all time favourite books “They Both Die at the End” by Adam Silvera. 
+        I took a copy of the book and cut and dyed the pages, turning the book itself into the artwork. The piece shows the two main 
+        characters Mateo and Rufus, showing their connection while grappling with their mortality at the same time. `
+        mainImage={MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+

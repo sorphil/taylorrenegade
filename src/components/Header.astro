@@ -1,5 +1,5 @@
 ---
-import logo from '../assets/taylor-violet ross-logo.png';
+import logo from '/src/assets/logo-site.png';
 const {active} = Astro.props;
 ---
 
@@ -17,13 +17,13 @@ const {active} = Astro.props;
                     <a class = `navbar-link ${active === "ABOUT" ? "active" : ""}` href="/about/" >ABOUT</a>
                 </li>
                 <li id="navbar-item-projects" class ="navbar-item"> 
-                    <a class = `navbar-link ${active === "PROJECTS" ? "active" : ""}` href="/projects/">FORENSIC ART</a>
+                    <a class = `navbar-link ${active === "FORENSIC ART" ? "active" : ""}` href="/forensic-art/">FORENSIC ART</a>
                 </li>
                 <li id="navbar-item-resume" class ="navbar-item"> 
-                    <a class = "navbar-link" >OTHER WORKS</a>
+                    <a class = `navbar-link ${active === "OTHER WORKS" ? "active" : ""}` href="/other-works/" >OTHER WORKS</a>
                 </li>
                 <li id="navbar-item-resume" class ="navbar-item"> 
-                    <a class = "navbar-link">CONTACT</a>
+                    <a class = `navbar-link ${active === "COMMISSIONS" ? "active" : ""}`  href="/commissions/">COMMISSIONS</a>
                 </li>
             </ul>
         </nav>
@@ -36,7 +36,7 @@ const {active} = Astro.props;
     {
         width:100%;
         text-align: center;
-        
+
     }
     .navbar-container
     {
@@ -57,17 +57,20 @@ const {active} = Astro.props;
     }
     .navbar-logo
     {
-        width:100%;
+        width:30rem;
+        height:auto;
+        clip:rect(0px,60px,200rem,0px);
+        object-fit: cover;
         height: auto;
     }
     .navbar-main
     {
-        margin-top:0.5rem;
+        margin-top:1rem
      
     }
     .navbar-list
     {
- 
+        
         display: flex;
         justify-content: space-evenly;
     }
@@ -75,14 +78,14 @@ const {active} = Astro.props;
     {
         list-style: none;
         display: inline-block;
-        padding: 1rem 1.5rem 1rem 1.5rem;
-        font-size: 1.45rem;
-        font-weight: 400;
+        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+        font-size: 1.35rem;
+   
         cursor: pointer;
         color:#66329d;
-        font-family: "Roboto", serif;
+        font-family: "M PLUS Rounded 1c", serif;
         font-optical-sizing: auto;
-        font-weight: <weight>;
+        font-weight: 700;
         font-style: normal;
         font-variation-settings:
             "wdth" 100;
@@ -95,7 +98,7 @@ const {active} = Astro.props;
             {
                 font-weight: 900;
                 color:#2c1744;
-           
+              
                 text-decoration: underline;
                 text-decoration-color: #2c1744;
                 text-decoration-thickness: 0.2rem;
@@ -110,5 +113,6 @@ const {active} = Astro.props;
             }
         }
     }
+
 </style>
 

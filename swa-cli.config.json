@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "taylorrenegade": {
+      "appLocation": ".",
+      "outputLocation": "./dist",
+      "run": "npm run dev",
+      "appDevserverUrl": "http://localhost:4321"
+    }
+  }
+}

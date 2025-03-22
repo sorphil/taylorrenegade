@@ -1,0 +1,114 @@
+---
+import MainLayout from './MainLayout.astro';
+import Header from '../components/Header.astro';
+import ProjectRow from '../components/projects/ProjectRow.astro';
+
+const {title, subtitle, year, text1, text2, mainImage, images, gridType} = Astro.props;
+---
+
+<MainLayout>
+    <main class="project-container">
+        
+         <ProjectRow orientation="alt" 
+            title={title}
+            subtitle={subtitle}
+            year={year}
+            text1={text1}
+            text2={text2}
+            image1 = {mainImage.src}
+            />
+            <div class="project-gallery" style=`grid-template-columns: repeat(${gridType}, 1fr);`>
+                {
+                    images?.map((image: any) => (
+                        <div class="project-image-container">
+                            <label>
+                                <input type="checkbox"/> 
+                                <img
+                                    class="project-image"
+                                    src={image.src}
+                                    alt=""
+                                    loading="lazy"
+                                />
+                            </label>
+                        </div>
+                    ))
+                }
+            </div>
+    </main>
+
+</MainLayout>
+
+<style>
+    .project-container
+    {
+        width:70rem;
+        margin-bottom:1rem;
+    }
+    .project-gallery-container
+    {
+        width:70rem;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    .project-gallery
+    {
+        display:grid;
+        gap:0.5rem;
+        width:100%;
+    }
+    .project-image-container
+    {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        & >label>input[type=checkbox]
+        {
+            display:none;
+            &:checked~img 
+            {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(1.8); 
+                cursor: zoom-out
+            }
+        }
+    }
+    
+
+    .project-image
+    {
+        width:22.5rem;
+    
+        height:auto;    
+        cursor: zoom-in
+    }
+
+    .click-zoom 
+</style>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+        let chkBoxes = document.querySelectorAll("input[type=checkbox]")
+        chkBoxes.forEach(input=>{
+            input.addEventListener('click', ()=>{
+                for(let i = 0; i < chkBoxes.length; i++)
+                {
+                    if(chkBoxes[i] != input && chkBoxes[i].checked==true)
+                    {
+                        chkBoxes[i].checked = false;
+                        break;
+                    }
+                }
+            })
+        })
+        document.addEventListener('click', ()=>{
+
+        })
+    })
+    
+
+</script>

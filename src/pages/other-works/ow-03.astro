@@ -1,0 +1,25 @@
+---
+
+import Header from '/src/components/Header.astro';
+import ProjectLayout from '/src/layouts/ProjectLayout.astro';
+import MainImage from '/src/assets/ow-images/ow-03/ow-03.jpg'
+const images = await Astro.glob("/src/assets/ow-images/ow-03/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`OTHER WORKS`/>
+    <ProjectLayout 
+        title=`Chemical Existence`
+        year=`2021`
+        subtitle=`Materials: Cut and Dyed Paper Pasted on Canvas (12 Inch Diameter)`
+        text1=`A self-portrait made of hand cut-and-dyed paper tabs from medication blister packs. This piece ponders the uncertainty of
+        relying on medications for your health and wellbeing. It can feel uncertain how much of your life is your own doing, how much is a 
+        curated chemical existence, and just how easy that could start crumbling without access to that treatment`
+        mainImage={MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+

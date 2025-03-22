@@ -1,0 +1,120 @@
+---
+import miniLogo from '/src/assets/logo-mini.png';
+---
+
+
+<footer class="footer-main-container">
+    <div class="footer-sub-container">
+        <div class="footer-image-container">
+            <img class="footer-logo" src={miniLogo.src}>
+        </div>
+        <div class="footer-text-container">
+            All imagery and content are copyright &copy; {new Date().getFullYear()} Taylor Violet Ross
+        </div>
+        <div class="footer-contact">
+            <div class="footer-socials-container">
+                <a class="footer-socials-item" target="__blank" href="https://www.instagram.com/taylor_renegade/">
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                </a>
+                <a class="footer-socials-item" target="__blank" href=mailto:taylorrenegade@outlook.com>
+                    <i class="fa-solid fa-envelope fa-xl" style="color: #551a8b;"></i>
+                </a>
+                <a class="footer-socials-item" target="__blank" href="https://www.tiktok.com/@taylor_renegade">
+                    <i class="fa-brands fa-tiktok fa-xl"></i>
+                </a>
+             
+            </div>
+            <!-- <a class="footer-btn" href="/contact/">Contact</a> -->
+        </div>
+   
+    </div>
+
+   
+</footer>                                       
+
+<style>
+    .footer-main-container
+    {
+
+        width:100%;
+        text-align: center;
+        background-color: #C4B5FD;
+        display: flex;
+       
+        justify-content: space-evenly;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    .footer-sub-container
+    {
+        width:100rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .footer-text-container
+    {
+        font-size:1.15rem;
+        width:25rem;
+        font-family: "M PLUS Rounded 1c", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+    }
+    .footer-contact
+    {
+        height:5rem;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items:center;
+        &>div
+        {
+            flex:1;
+        }
+    }
+    .footer-btn
+    {
+        background-color: #551a8b;
+        color:white;
+        padding:0.5rem 1rem 0.5rem 1rem;
+        border-radius: 0.5rem;
+        margin-top:1rem;
+        width:100%;
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover
+        {
+            opacity:80%;
+        }
+    }
+    .footer-socials-container
+    {
+        display: flex;
+        width:10rem;
+        justify-content: space-between;
+    }
+    .footer-socials-item
+    {
+        width:1.75rem;
+        height: 1.75rem;
+        border-radius: 100%;
+        background-color: white;
+        padding:0.5rem;
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        cursor:pointer;
+        &:hover
+        {
+            background-color: rgb(211, 211, 211);
+        }
+    }
+    .footer-logo
+    {
+        width:12rem;
+        padding-top:1rem;
+        height: auto;
+    }
+</style>

@@ -1,0 +1,26 @@
+---
+
+import Header from '/src/components/Header.astro';
+import ProjectLayout from '/src/layouts/ProjectLayout.astro';
+import MainImage from '/src/assets/fa-images/fa-02/fa-02.png'
+const images = await Astro.glob("/src/assets/fa-images/fa-02/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`FORENSIC ART`/>
+    <ProjectLayout 
+        title=`Giraffe Skull Reconstruction`
+        year=`2024`
+        subtitle=`Materials: 3D Printed Giraffe Skulls, Sculpting Wax, Oil Paint`
+        text1=`This is a self directed project as part of my MSc Forensic Art and Facial Imaging Course. Ever since I can remember, 
+        Giraffes have always been my favourite animal. I was able to get access to a 3D scanned giraffe skull through Geoffrey Marchal 
+        on SketchFab, and 3D printed the skull twice to use within this project. One giraffe is a full reconstruction looking to recreate 
+        a finished likeness of the giraffe, and one is an ecorche showing both the muscle and bone layers.`
+        mainImage = {MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+

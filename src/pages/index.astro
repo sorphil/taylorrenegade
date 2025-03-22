@@ -1,31 +1,80 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import MainLayout from '/src/layouts/MainLayout.astro';
 
-import Slideshow from '../components/index/Slideshow.astro';
+import AboutRow from '/src/components/about/AboutRow.astro';
+import Header from '/src/components/Header.astro';
 
-import AboutRow from '../components/about/AboutRow.astro';
-import Header from '../components/Header.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import FAImageLink from '/src/assets/home/fa-img.png'
+import OWImageLink from '/src/assets/home/ow-img.png'
+import COMImageLink from '/src/assets/home/com-img.png'
 ---
-<Header active="HOME"/>
-<Layout>
 
+<Header active="HOME"/>
+<MainLayout>
 	<main>
-		<Slideshow/>
 		<section class ="index-about">
-			<AboutRow orientation="normal"/>
+			<a class="index-link"  href="/forensic-art/">
+				<img class="index-link-image" src={FAImageLink.src}>
+				<div class="index-link-text">
+					FORENSIC ART
+				</div>
+			</a>
+			<a class="index-link"  href="/other-works/">
+				<img  class="index-link-image" src={OWImageLink.src}>
+				<div  href="/about/" class="index-link-text">
+					OTHER WORKS
+				</div>
+			</a>
+			<a class="index-link" href="/commissions/">
+				<img  class="index-link-image" src={COMImageLink.src}>
+				<div class="index-link-text">
+					COMMISSIONS
+				</div>
+			</a>
 		</section>
-		
 	</main>
-	
-</Layout>
+</MainLayout>
 
 <style>
  .index-about
  {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+ }
+ .index-link
+ {
+	width:100%;
+	height: auto;
+	position:relative;
+
+	&:hover
+	{
+		text-decoration: underline;
+		cursor: pointer;
+		opacity: 90%;
+	}
+
+ }
+ 
+ .index-link-image
+ {
+	filter: brightness(40%);
+	width:100%;
+	height: auto;
+ }
+ .index-link-text
+ {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 5rem;
+	text-decoration: none;
+	font-weight: bolder;
+	font-family: "Roboto", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
  }
 </style>

@@ -1,0 +1,29 @@
+---
+
+import Header from '/src/components/Header.astro';
+import ProjectLayout from '/src/layouts/ProjectLayout.astro';
+import MainImage from '/src/assets/fa-images/fa-06/fa-06.jpg'
+const images = await Astro.glob("/src/assets/fa-images/fa-06/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`FORENSIC ART`/>
+    <ProjectLayout 
+        title=`Artificial Age Progression: Child to Adult`
+        year=`2024`
+        subtitle=`Materials: Adobe Illustrator, Procreate`
+        text1=`As part of our Artificial Age Progression training we were tasked with creating both childhood and adult progressions. 
+        The in class images and cases we worked on are confidential and can’t be shared, but this one is an extra credit childhood age 
+        progression that I got my partner to source images for. This practice age progression is of a 10 year old Filipino boy, and the 
+        target age of the final progression was 20-25. Artificial Age Progressions are an important facet of forensic art, using images of 
+        a target individual and creating a visualization of what they may look like currently. In cases of missing children this is 
+        especially important, as it both can bring new light to a case as well as help people visualize how much said child's face may 
+        have changed with age.`
+        mainImage = {MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+

@@ -1,0 +1,25 @@
+---
+
+import Header from '/src/components/Header.astro';
+import ProjectLayout from '/src/layouts/ProjectLayout.astro';
+import MainImage from '/src/assets/ow-images/ow-01/ow-01.png'
+const images = await Astro.glob("/src/assets/ow-images/ow-01/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`OTHER WORKS`/>
+    <ProjectLayout 
+        title=`Ecorche`
+        year=`2025`
+        subtitle=`Material: Alcohol Markers, Acrylic Paint, Watercolour Paper`
+        text1=`An exploratory ecorche exploring human anatomy as well as artistic principles like colour and exaggeration. 
+        This piece is a mixture between the more science based parts of my work, and mixing that with the exploratory nature of my 
+        alcohol marker portraits.`
+        mainImage={MainImage}
+        images={images}
+        gridType=2
+        />
+
+
+

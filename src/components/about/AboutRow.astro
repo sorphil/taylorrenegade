@@ -1,5 +1,6 @@
 ---
-const {orientation, text1, text2, image1, image2} = Astro.props;
+const {orientation,title, subtitle, year, text1, text2, image1, image2} = Astro.props;
+
 ---
 <section class ="about-row-container" style=`flex-direction: ${orientation !== "alt" ? "row" : "row-reverse"};`>
     <div class="about-row-image-container">
@@ -15,6 +16,7 @@ const {orientation, text1, text2, image1, image2} = Astro.props;
         
     </div>
     <div class="about-row-text-container">
+      
         <p class="about-row-text">
             {text1}
         </p>
@@ -28,9 +30,10 @@ const {orientation, text1, text2, image1, image2} = Astro.props;
     .about-row-container
     {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         padding:2rem 0 2rem 0;
-        width: 90rem;
+        width: 70rem;
+
 
     }
     .about-row-image-container
@@ -42,7 +45,7 @@ const {orientation, text1, text2, image1, image2} = Astro.props;
     }
     .about-row-image
     {
-        width:25rem;
+        width:32.5rem;
         height: auto;
         padding: 1rem 0 1rem 0;
     }
@@ -50,12 +53,14 @@ const {orientation, text1, text2, image1, image2} = Astro.props;
     .about-row-text-container
     {
 
-        font-size: 1.3rem;
-        width:40rem;
+        font-size: 1.15rem;
+        width:32.5rem;
         color:black;
         display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        align-items:center;
+        flex-direction:column;
+        justify-content:center;
+     
+
     }
 </style>

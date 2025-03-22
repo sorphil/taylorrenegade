@@ -1,0 +1,25 @@
+---
+
+import Header from '/src/components/Header.astro';
+import ProjectLayout from '/src/layouts/ProjectLayout.astro';
+import MainImage from '/src/assets/fa-images/fa-05/fa-05.jpg'
+const images = await Astro.glob("/src/assets/fa-images/fa-05/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`FORENSIC ART`/>
+    <ProjectLayout 
+        title=`A Collection of Scientific Illustrations`
+        year=`2023-2025`
+        subtitle=`Materials: Adobe Illustrator, Procreate, Ballpoint Pen, Pencil`
+        text1=`A collection of my scientific illustrations created in semester one of my MSc Forensic Art & Facial Imaging course. 
+        Our first semester was joint with the Medical Art program, so I was able to learn introductory knowledge on medical 
+        illustration and art.`
+        mainImage = {MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+

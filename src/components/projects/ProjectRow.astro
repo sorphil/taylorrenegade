@@ -1,0 +1,69 @@
+---
+const {orientation,title, subtitle, year, text1, text2, image1, image2} = Astro.props;
+---
+<section class ="project-row-container" style=`flex-direction: ${orientation !== "alt" ? "row" : "row-reverse"};`>
+    <div class="project-row-image-container">
+        {image1  ? 
+            <img class="project-row-image" src={image1}/> :
+            <img class="project-row-image" src="https://placehold.co/600x400"/>
+            
+        }
+        {image2  ? 
+            <img class="project-row-image" src={image2}/> :
+            "" 
+        }
+        
+    </div>
+    <div class="project-row-text-container">
+        <h1 class="project-title" style="width:100%">
+            {title}
+        </h1>
+        <i style=width:100%;>
+            Year: {year}<br>{subtitle}
+        </i>
+        <p class="project-row-text">
+            {text1}
+        </p>
+        {text2 !== "" && (
+            <p class="project-row-text">{text2}</p>
+        )}
+    </div>
+</section>
+
+<style>
+    .project-row-container
+    {
+        display: flex;
+        justify-content: space-between;
+        padding:2rem 0 2rem 0;
+        width: 70rem;
+
+
+    }
+    .project-row-image-container
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .project-row-image
+    {
+        width:32.5rem;
+        height: auto;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .project-row-text-container
+    {
+
+        font-size: 1.15rem;
+        width:30rem;
+        color:black;
+        display:flex;
+        align-items:center;
+        flex-direction:column;
+     
+
+    }
+</style>

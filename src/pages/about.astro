@@ -1,32 +1,61 @@
 ---
-import AboutRow from '../components/about/AboutRow.astro';
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
-import Image1 from '../assets/img-1.jpg'
-import Image2 from '../assets/img-2.jpg'
----
-<Header active="ABOUT"/>
-<Layout>
+import AboutRow from '/src/components/about/AboutRow.astro';
+import Header from '/src/components/Header.astro';
+import MainLayout from '/src/layouts/MainLayout.astro';
+import ImageOne from '/src/assets/about/1.jpg'
+import ImageTwo from '/src/assets/about/2.jpg'
+import ImageThree from '/src/assets/about/3.jpg'
 
-	<main class="about-container">
-        <AboutRow orientation="normal" 
-            text1="My name is Taylor Violet Ross and I am a multidisciplinary artist with a specialization in forensic art. After having a deep fascination with both art and forensic science independently, I now work to find a coexistence between the two and further both within the lens of the other. Ever since I was a kid I was always made to feel like “the arts” and “the sciences” were exclusionary of each other, so being able to show that the two could not only coexist but inform and help eachother grow and evolve has been a big passion of mine."
-            text2=" I pride myself on being an artist with a grasp on many mediums, which includes traditional (Drawing, Painting), digital (Adobe workspaces, Procreate), 3D (Traditional sculpture, 3D digital sculpting) and a love for unconventional materials. I am also proficient and have received training in many forensic art techniques, including Craniofacial Approximations (3D manual, 3D digital, 2D), Craniofacial Superimpositions, Forensic photography, Composite Sketching, Cognitive Interviewing, Artificial Age progressions, and Facial Imaging analysis."
+---
+<Header active=`ABOUT`/>
+<MainLayout>
+
+	<main class=`about-container`>
+        <AboutRow orientation=`normal` 
+            image1={ImageOne.src}
+            text1=`My name is Taylor Violet Ross and I am a multidisciplinary artist with a specialized masters in forensic art. 
+            After having a deep fascination with both art and forensic science independently, I now work to find a coexistence between the 
+            two and further both within the lens of the other. I pride myself on being an artist with a grasp on many mediums, which 
+            includes traditional (Drawing, Painting), digital (Adobe workspaces, Procreate), 3D (Traditional sculpture, 3D digital sculpting)
+            and a love for unconventional materials.`
             
+            text2=`I am also proficient and have received training in many forensic art techniques, including craniofacial approximations 
+            (3D manual, 3D digital, 2D), craniofacial superimpositions, forensic photography, composite sketching 
+            (including cognitive interviewing), artificial age progressions, postmortem depictions, and facial image comparison`
+            s
             />
         
-        <AboutRow orientation="alt" 
-            text1="I received my Bachelor of Fine Art (Honours) in Cross Disciplinary Art: Life Studies from OCAD University in Toronto, Canada in 2023. My Journey at OCADU started in the Drawing & Painting program, but I soon switched to the Life Studies program in my second year under the amazing guidance of program leads Amy Swartz and Natalie Wahlburger. Life Studies is a program that combines artistic creation and exploration with themes of anatomy, biology, ecology, sustainability and nature.  In my time at OCAD U I was able to take part in multiple public art shows and exhibitions, including the “Propinquity” thesis show at Gallery 1313 in 2023 and an early 2020 Poetry show at the A.G.O under the tutelage of Lillian Allen."/>
-        <AboutRow orientation="normal" 
-            text1="I received my Masters of Science in Forensic Art & Facial Imaging (Merit) from the University of Dundee in Dundee, Scotland in 2024. This program allowed me to fully immerse myself in practical applications of art within the world of science under the expert guidance of Dr. Tobias Houlton (our program lead), Dr. Caroline Erolin (Medical Art program lead), and a wide array of global guest lecturers within the Forensic, Medical, and Art fields. Our first semester was mixed with the MSc Medical Art program so I was able to learn basic knowledge of Medical illustration, and our second semester was fully focused on applications of forensic art. These include Craniofacial Approximations (3D manual, 3D digital, 2D), Craniofacial Superimpositions, Forensic photography, Composite Sketching, Cognitive Interviewing, Artificial Age progressions, Facial Imaging analysis and forensic report writing."
-            text2="For one of my self directed projects of this semester I was able to work with CECAS (City of Edinburgh Council Archeology Service) to do a Craniofacial approximation of a medieval skull from Leith, Edinburgh. For my third semester dissertation I focused on the gendered aspects within current Craniofacial approximation standards and how to make these practices more inclusive to trans-feminine individuals. I did 3 approximations on the same male skull, using male, gender neutral, and female approximation standards, comparing the differences and which standards should be used in different circumstances. The project focused on secondary identifiers within remains and how these can show a possible transgender identity, as well as historical examples of trans-feminine remains and approximations and correlations between hormone therapy and soft tissue thickness."
-            image1={Image1.src}
-            image2={Image2.src}/>
+        <AboutRow orientation=`alt` 
+        image1={ImageTwo.src}
+            text1=`I received my Bachelor of Fine Art (Honours) in Cross Disciplinary Art: Life Studies from OCAD University (Toronto, Canada) 
+            in 2023. My Journey at OCADU started in the Drawing & Painting program, but I soon switched to the Life Studies program in my 
+            second year under the amazing guidance of program leads Amy Swartz and Natalie Wahlburger. Life Studies is a program that combines
+            artistic creation and exploration with themes of anatomy, biology, ecology, sustainability and nature. In my time at OCADU I was 
+            able to take part in multiple public art shows and exhibitions, including the “Propinquity” thesis show at Gallery 1313 in 2023 and 
+            an early 2020 Poetry show at the A.G.O under the tutelage of Lillian Allen`/>
+        
+        
+        <AboutRow orientation=`normal`
+        image1={ImageThree.src} 
+            text1=`I received my Masters of Science in Forensic Art & Facial Imaging (Merit) from the University of Dundee (Dundee, Scotland) 
+            in 2024. This program allowed me to fully immerse myself in practical applications of art within the world of science under the 
+            expert guidance of Dr. Tobias Houlton (Forensic Art program lead), Dr. Caroline Erolin (Medical Art program lead), and a 
+            wide array of global guest lecturers within the Forensic, Medical, and Art fields`
+
+            text2=`Our first semester was mixed with the MSc Medical Art program so I was able to learn basic knowledge of Medical illustration, 
+            and our second semester was fully focused on applications of forensic art. For one of my self directed projects of the second 
+            semester I was able to work with CECAS (City of Edinburgh Council Archeology Service) to do a Craniofacial approximation of a 
+            medieval skull from Leith, Edinburgh. For my third semester dissertation I focused on the gendered aspects within current 
+            Craniofacial approximation standards and how to make these practices more inclusive to trans-feminine individuals. 
+            This project focused on secondary identifiers within remains and how these can show a possible transgender identity, 
+            historical examples of trans-feminine remains and approximations, as well as correlations between hormone therapy and 
+            soft tissue thickness.`
+           />
 
 	</main>
 	
-</Layout>
-<Header active="ABOUT"/>
+</MainLayout>
+
 <style>
     .about-container
     {
