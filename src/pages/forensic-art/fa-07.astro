@@ -1,9 +1,9 @@
 ---
 
-import Header from '/src/components/Header.astro';
-import ProjectLayout from '/src/layouts/ProjectLayout.astro';
-import MainImage from '/src/assets/fa-images/fa-07/fa-07.PNG'
-const images = await Astro.glob("/src/assets/fa-images/fa-07/images/*").then(files => {
+import Header from '../../components/Header.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/fa-images/fa-07/fa-07-tile.jpg'
+const images = await Astro.glob("../assets/fa-images/fa-07/images/*").then(files => {
   return files.map(file => file.default);
 });
 
