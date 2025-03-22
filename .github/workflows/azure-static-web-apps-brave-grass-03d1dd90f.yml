@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: Set User Configurations
+        run: |
+          git config --global user.name sorphil
+          git config --global user.email psoriano01@hotmail.com
+          chmod -R 777 .  # Change permissions as necessar
       - uses: actions/checkout@v3
         with:
           submodules: true
