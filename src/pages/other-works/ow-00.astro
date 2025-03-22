@@ -1,8 +1,8 @@
 ---
 
-import Header from '/src/components/Header.astro';
-import ProjectLayout from '/src/layouts/ProjectLayout.astro';
-import MainImage from '/src/assets/ow-images/ow-00/ow-00.jpg'
+import Header from "../../components/Header.astro"
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/ow-images/ow-00/ow-00.jpg'
 const images = await Astro.glob("/src/assets/ow-images/ow-00/images/*").then(files => {
   return files.map(file => file.default);
 });
