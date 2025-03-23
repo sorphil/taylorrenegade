@@ -57,7 +57,7 @@ jobs:
           skip_api_build: true
           app_artifact_location: ${{ env.APP_ARTIFACT_LOCATION }}
           output_location: ${{ env.OUTPUT_LOCATION }}
-          ###### End of Repository/Build Configurations #####
+          ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
     permissions:
