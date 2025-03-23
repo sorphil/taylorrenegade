@@ -11,12 +11,13 @@ import OWImage05 from "/src/assets/ow-images/ow-05/ow-05-tile.jpg"
 import OWImage06 from "/src/assets/ow-images/ow-06/ow-06-tile.jpg"
 import OWImage07 from "/src/assets/ow-images/ow-07/ow-07-tile.jpg"
 import OWImageHead from '/src/assets/ow-images/ow-head.jpg'
+import { Image } from 'astro:assets';
 ---
 <Header active="OTHER WORKS"/>
 <MainLayout>
 
     <div class="other-works-head-container">
-        <img class="other-works-head-image" src={OWImageHead.src}>
+        <Image alt="Collage of various artwork containing text 'Other Work' as the title." src={OWImageHead} class="other-works-head-image" loading="eager" />
         <div class="other-works-head-text">
             OTHER WORKS
         </div>
@@ -27,53 +28,61 @@ import OWImageHead from '/src/assets/ow-images/ow-head.jpg'
     </div>
 	<main class="other-works-container">
         <ProjectItem
-            imageSrc = {OWImage00.src} 
+            imageSrc = {OWImage00} 
             name="Amensalism"
             altText="An image of Taylor alongside her dissertation work"
             link="/other-works/ow-00"
+            loading="eager"
         />  
         <ProjectItem
-            imageSrc = {OWImage01.src} 
+            imageSrc = {OWImage01} 
             name="Ecorche"
             altText="An image of Taylor alongside her dissertation work"
             link="/other-works/ow-01"
+            loading="eager"
         />  
         <ProjectItem
-            imageSrc = {OWImage02.src} 
+            imageSrc = {OWImage02} 
             name="Collection of Portraits"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
             link="/other-works/ow-02"
+            loading="eager"
         />  
         <ProjectItem
-            imageSrc = {OWImage03.src} 
+            imageSrc = {OWImage03} 
             name="Chemical Existence"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
             link="/other-works/ow-03"
+            loading="lazy"
         /> 
         <ProjectItem
-            imageSrc = {OWImage04.src} 
+            imageSrc = {OWImage04} 
             name="Memories That Breathe"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
             link="/other-works/ow-04"
+            loading="lazy"
         /> 
         <ProjectItem
-            imageSrc = {OWImage05.src} 
+            imageSrc = {OWImage05} 
             name="After"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
             link="/other-works/ow-05"
-        /> 
+            loading="lazy"
+            /> 
         <ProjectItem
-            imageSrc = {OWImage06.src} 
+            imageSrc = {OWImage06} 
             name="A Collection of Life Drawings"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
             link="/other-works/ow-06"
-        /> 
+            loading="lazy"
+            /> 
         <ProjectItem
-            imageSrc = {OWImage07.src} 
+            imageSrc = {OWImage07} 
             name="They Both Die at The End"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
             link="/other-works/ow-07"
-        /> 
+            loading="lazy"
+            /> 
       
 	</main>
 	
