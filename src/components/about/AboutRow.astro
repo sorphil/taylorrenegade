@@ -4,7 +4,7 @@ import Image from "astro/components/Image.astro";
 const {orientation,title, subtitle, year, text1, text2, image1, image2} = Astro.props;
 
 ---
-<section class ="about-row-container" style=`flex-direction: ${orientation !== "alt" ? "row" : "row-reverse"};`>
+<section class ="about-row-container" style=`flex-direction:`>
     <div class="about-row-image-container">
         {image1  ? 
             <Image alt="" class="about-row-image" src={image1}/> :
@@ -64,5 +64,30 @@ const {orientation,title, subtitle, year, text1, text2, image1, image2} = Astro.
         justify-content:center;
      
 
+    }
+    @media only screen and (max-width: 500px) {
+        .about-row-container
+        {
+            display: flex;
+            
+            justify-content: space-between;
+            flex-direction: column;
+            padding:2rem 0 2rem 0;
+            width:100%;
+            width:60rem;
+
+        }
+        .about-row-image
+        {
+            width:45rem;
+            height: auto;
+            padding: 1rem 2rem; 1rem 0;
+        }
+        .about-row-text-container
+        {
+            width:100%;
+            font-size:2rem;
+     
+        }
     }
 </style>

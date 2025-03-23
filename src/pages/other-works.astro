@@ -18,9 +18,9 @@ import { Image } from 'astro:assets';
 
     <div class="other-works-head-container">
         <Image alt="Collage of various artwork containing text 'Other Work' as the title." src={OWImageHead} class="other-works-head-image" loading="eager" />
-        <div class="other-works-head-text">
+        <h1 class="other-works-head-text">
             OTHER WORKS
-        </div>
+        </h1>
     </div>
     <div class="other-works-text">
         This page showcases a selection of my artistic works beyond forensic art, including pieces created during my undergraduate studies in Life Studies. 
@@ -109,7 +109,8 @@ import { Image } from 'astro:assets';
  .other-works-head-text
  {
 	position: absolute;
-	top: 50%;
+
+	top: 35%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
@@ -121,12 +122,7 @@ import { Image } from 'astro:assets';
         font-weight: 700;
  }
 
-    .other-works-title
-    {
-        padding-top:1rem;
-        text-align: center; 
-
-    }
+   
     .other-works-text
     {
         width:59.5rem; 
@@ -145,5 +141,48 @@ import { Image } from 'astro:assets';
    
     }
  
-   
+    @media only screen and (max-width: 500px) 
+    {
+        
+        .other-works-title
+        {
+            padding-top:1rem;
+            text-align: center; 
+
+        }
+        .other-works-head-container
+        {
+            width:100%;
+            height: auto;
+            position:relative;
+
+            margin:2rem 0 1rem 0;
+        }
+        .other-works-head-text
+        {
+            font-size: 4rem;;
+        }
+        .other-works-text
+        {
+            width:100%;
+            font-size:2rem;
+            padding:0 0.75rem 0 0.75rem;
+            box-sizing: border-box;
+
+        }
+        .other-works-container
+        {
+            text-align: center;
+            width: 100%;
+            padding:2rem 1rem 2rem 1rem;
+            display: inline-grid;
+            box-sizing: border-box;
+            grid-template-columns: repeat(1, 1fr); 
+            justify-items: center;
+        
+    
+        }
+ 
+    }
+
 </style>

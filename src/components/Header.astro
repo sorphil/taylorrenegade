@@ -53,12 +53,12 @@ const {active} = Astro.props;
     {
         display: flex;
         justify-content: center;
-        margin-top:2rem;
+        /* margin-top:2rem; */
      
     }
     .navbar-logo
     {
-        width:30rem;
+        width:25rem;
         height:auto;
         clip:rect(0px,60px,200rem,0px);
         object-fit: cover;
@@ -113,6 +113,27 @@ const {active} = Astro.props;
                 opacity:100%;
             }
         }
+    }
+
+    @media only screen and (max-width: 500px) 
+    {
+        
+    
+        .navbar-logo
+        {
+            width: 25rem;
+
+        }
+        .navbar-item
+        {
+            font-size:1.65rem;
+        }
+        .navbar-list
+        {
+            
+            margin-right:1.75rem;
+        }
+      
     }
 
 </style>

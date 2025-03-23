@@ -148,5 +148,47 @@ import { Image } from 'astro:assets';
    
     }
  
-   
+    @media only screen and (max-width: 500px) 
+    {
+        
+        .forensic-art-title
+        {
+            padding-top:1rem;
+            text-align: center; 
+
+        }
+        .forensic-art-head-container
+        {
+            width:100%;
+            height: auto;
+            position:relative;
+
+            margin:2rem 0 1rem 0;
+        }
+        .forensic-art-head-text
+        {
+            font-size: 4rem;;
+        }
+        .forensic-art-text
+        {
+            width:100%;
+            font-size:2rem;
+            padding:0 0.75rem 0 0.75rem;
+            box-sizing: border-box;
+
+        }
+        .forensic-art-container
+        {
+            text-align: center;
+            width: 100%;
+            padding:2rem 1rem 2rem 1rem;
+            display: inline-grid;
+            box-sizing: border-box;
+            grid-template-columns: repeat(1, 1fr); 
+            justify-items: center;
+        
+    
+        }
+ 
+    }
 </style>

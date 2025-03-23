@@ -2,14 +2,47 @@
 	html,
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+ 
 		font-size: 16px;
 		font-family: "Roboto", sans-serif;
 		font-optical-sizing: auto;
-
+        width:100%;
 		font-style: normal;
-		display:flex;
-		flex-direction:column;
-		align-items:center;
+        
+
 	}
+    @media only screen and (max-width: 500px) {
+        body {
+            font-size:15px;
+            min-width:70rem;
+            max-width: 85rem;
+            /* width: 100%; */
+            display:block;
+        }
+        main
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+    }
+
+    @media only screen and (max-width: 3200px) {
+        body {
+            font-size:15px;
+            width:100%;
+            /* width: 100%; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        main
+        {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+    }

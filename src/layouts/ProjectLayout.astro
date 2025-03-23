@@ -43,6 +43,8 @@ const {title, subtitle, year, text1, text2, mainImage, images, gridType} = Astro
     {
         width:70rem;
         margin-bottom:1rem;
+        display: flex;
+        flex-direction: column;
     }
     .project-gallery-container
     {
@@ -86,7 +88,30 @@ const {title, subtitle, year, text1, text2, mainImage, images, gridType} = Astro
         cursor: zoom-in
     }
 
-    .click-zoom 
+    @media only screen and (max-width: 500px) {
+        .project-container
+        {
+            width: 70rem;
+        }
+        .project-image-container
+    {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        & >label>input[type=checkbox]
+        {
+            display:none;
+            &:checked~img 
+            {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(2.5); 
+                cursor: zoom-out
+            }
+        }
+    }
+    }
 </style>
 
 <script>

@@ -5,7 +5,7 @@ const {imageSrc,  name, altText, link, loading} = Astro.props;
 ---
 
 <a class="item" style="background-color: #C4B5FD;" href={link}>
-    <Image class="fp-item-image" src={imageSrc} alt={altText} style=" height: 18rem; width:100%;" loading={loading}/>
+    <Image class="fp-item-image" src={imageSrc} alt={altText} loading={loading}/>
 
     <div class="fp-item-text">{name}</div>
 </a>
@@ -40,6 +40,30 @@ const {imageSrc,  name, altText, link, loading} = Astro.props;
         background-color: #C4B5FD; 
         padding:0.25rem 0 0rem 0;
       
+    }
+
+    @media only screen and (max-width: 500px) 
+    {
+        .item
+        {
+            align-self: center;
+            width:55rem;
+            height: 62.5rem;
+        }
+        .fp-item-image
+        {
+            height: 55rem;
+            width:100%;
+        
+        }
+    
+        .fp-item-text
+        {
+            margin-top:2rem;
+            font-size: 3rem;
+         
+        }
+ 
     }
     
 </style>

@@ -1,7 +1,7 @@
 ---
 const {orientation,title, subtitle, year, text1, text2, image1} = Astro.props;
 ---
-<section class ="project-row-container" style=`flex-direction: ${orientation !== "alt" ? "row" : "row-reverse"};`>
+<section class ="project-row-container">
     <div class="project-row-image-container">
         <label>
             <input type="checkbox"/> 
@@ -31,10 +31,7 @@ const {orientation,title, subtitle, year, text1, text2, image1} = Astro.props;
 </section>
 
 <style>
-     .project-image-container
-    {
-       
-    }
+
     .project-row-container
     {
         display: flex;
@@ -83,6 +80,51 @@ const {orientation,title, subtitle, year, text1, text2, image1} = Astro.props;
      
 
     }
+    @media only screen and (max-width: 500px) {
+        .project-row-container
+        {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            padding:2rem 0 2rem 0;
+            width: 60rem;
+
+
+        }
+        .project-row-image
+        {
+            width:30rem;
+            height: auto;
+            padding: 1rem 2rem; 1rem 0;
+        }
+        .project-row-text-container
+        {
+            width:100%;
+            font-size: 2rems;
+        }
+        .project-row-image-container
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: zoom-in;
+            & >label>input[type=checkbox]
+            {
+                display:none;
+                &:checked~img 
+                {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(2); 
+                    cursor: zoom-out
+                }
+            }
+        }
+    }
+    
+    
 </style>
 <script>
 
