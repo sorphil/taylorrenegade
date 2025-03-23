@@ -33,6 +33,15 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Astro Project
+        run: npm run build
+  
+      - name: Verify Build Output
+        run: ls -R dist # 👈 This will help confirm if 'index.html' exists 
+        
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
