@@ -11,12 +11,13 @@ import FAImage05 from "../assets/fa-images/fa-05/fa-05-tile.jpg"
 import FAImage06 from "../assets/fa-images/fa-06/fa-06-tile.jpg"
 import FAImage07 from "../assets/fa-images/fa-07/fa-07-tile.jpg"
 import FAImageHead from '../assets/fa-images/fa-head.png'
+import { Image } from 'astro:assets';
 ---
 <Header active="FORENSIC ART"/>
 <MainLayout>
 
     <div class="forensic-art-head-container">
-        <img class="forensic-art-head-image" src={FAImageHead.src}>
+        <Image src={FAImageHead} alt="Collage of forensic art work containing text 'Forensic Art' as the title." class="forensic-art-head-image" loading="eager"/>
         <div class="forensic-art-head-text">
             FORENSIC ART
         </div>
@@ -29,52 +30,60 @@ import FAImageHead from '../assets/fa-images/fa-head.png'
     </div>
 	<main class="forensic-art-container">
         <ProjectItem
-            imageSrc = {FAImage00.src} 
+            imageSrc = {FAImage00} 
             name="Master's Forensic Art Dissertation"
-            altText="An image of Taylor alongside her dissertation work"
+            altText="Taylor Ross standing beside her dissertation work."
             link="/forensic-art/fa-00"
+            loading="eager"
         />  
         <ProjectItem
-            imageSrc = {FAImage01.src} 
+            imageSrc = {FAImage01} 
             name="CECAS Collaboration Approximation"
-            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            altText="An illustration of a woman approximated from a skull of a woman from Leith, Edinburgh."
             link="/forensic-art/fa-01"
+            loading="eager"
         />  
         <ProjectItem
-            imageSrc = {FAImage02.src} 
+            imageSrc = {FAImage02} 
             name="Giraffe Skull Reconstruction"
-            altText="An image containing a giraffe ecorche reconstructed from a skull"
+            altText="A giraffe ecorche reconstructed from a skull exhibiting the different layers of muscle, fat and bones underneath its skin."
             link="/forensic-art/fa-02"
+            loading="eager"
         />
         <ProjectItem
-            imageSrc = {FAImage03.src} 
+            imageSrc = {FAImage03} 
             name="Collection of Composite Sketches"
-            altText="An image of a sketch of a man"
-                link="/forensic-art/fa-03"
+            altText="A forensic drawing or sketch of a man."
+            link="/forensic-art/fa-03"
+            loading="late"
         />  
         <ProjectItem
-            imageSrc = {FAImage04.src} 
+            imageSrc = {FAImage04} 
             name="FFS Wax Ecorche"
-            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            altText="A sculpture/ecorche of a woman undergoing facial feminization surgery exhibiting the different areas of surgery."
             link="/forensic-art/fa-04"
+            loading="late"
         />  
         <ProjectItem
-            imageSrc = {FAImage05.src} 
+            imageSrc = {FAImage05} 
             name="Collection of Scientific Illustrations"
-            altText="An image containing a giraffe ecorche reconstructed from a skull"
-                link="/forensic-art/fa-05"
+            altText="A labelled diagram or illustration of a left hand."
+            link="/forensic-art/fa-05"
+            loading="late"
         />
         <ProjectItem
-            imageSrc = {FAImage06.src} 
+            imageSrc = {FAImage06} 
             name="Artificial Age Progression: Child"
-            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
-                link="/forensic-art/fa-06"
+            altText="An illustration of a child."
+            link="/forensic-art/fa-06"
+            loading="late"
         />  
         <ProjectItem
-            imageSrc = {FAImage07.src} 
+            imageSrc = {FAImage07} 
             name="Artificial Age Progression: Adult"
-            altText="An image containing a giraffe ecorche reconstructed from a skull"
-                link="/forensic-art/fa-07"
+            altText="A man artificially aged up, with each illustration placed side by side to show the differences between the different ages."
+            link="/forensic-art/fa-07"
+            loading="late"
         />
         
       
@@ -94,12 +103,6 @@ import FAImageHead from '../assets/fa-images/fa-head.png'
 
  }
  
- .forensic-art-head-image
- {
-	filter: brightness(40%);
-	width:100%;
-	height: auto;
- }
  .forensic-art-head-text
  {
 	position: absolute;
@@ -113,6 +116,12 @@ import FAImageHead from '../assets/fa-images/fa-head.png'
 	font-family: "Roboto", serif;
         font-optical-sizing: auto;
         font-weight: 700;
+ }
+ .forensic-art-head-image
+ {
+    filter: brightness(40%);
+     width:100%; 
+     height: auto;
  }
 
     .forensic-art-title

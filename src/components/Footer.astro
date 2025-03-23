@@ -1,4 +1,5 @@
 ---
+import Image from 'astro/components/Image.astro';
 import miniLogo from '../assets/logo-mini.png';
 ---
 
@@ -6,20 +7,20 @@ import miniLogo from '../assets/logo-mini.png';
 <footer class="footer-main-container">
     <div class="footer-sub-container">
         <div class="footer-image-container">
-            <img class="footer-logo" src={miniLogo.src}>
+            <Image class="footer-logo" src={miniLogo} alt="Minified logo for Taylor Violet Ross">
         </div>
         <div class="footer-text-container">
             All imagery and content are copyright &copy; {new Date().getFullYear()} Taylor Violet Ross
         </div>
         <div class="footer-contact">
             <div class="footer-socials-container">
-                <a class="footer-socials-item" target="__blank" href="https://www.instagram.com/taylor_renegade/">
+                <a class="footer-socials-item" target="__blank" aria-label="Instagram" href="https://www.instagram.com/taylor_renegade/">
                     <i class="fa-brands fa-instagram fa-xl"></i>
                 </a>
-                <a class="footer-socials-item" target="__blank" href=mailto:taylorrenegade@outlook.com>
+                <a class="footer-socials-item" target="__blank" aria-label="Email" href=mailto:taylorrenegade@outlook.com>
                     <i class="fa-solid fa-envelope fa-xl" style="color: #551a8b;"></i>
                 </a>
-                <a class="footer-socials-item" target="__blank" href="https://www.tiktok.com/@taylor_renegade">
+                <a class="footer-socials-item" target="__blank" aria-label="Tiktok" href="https://www.tiktok.com/@taylor_renegade">
                     <i class="fa-brands fa-tiktok fa-xl"></i>
                 </a>
              
