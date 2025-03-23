@@ -3,7 +3,7 @@
 import Header from '../../components/Header.astro';
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
 import MainImage from '../../assets/fa-images/fa-00/fa-00.png'
-const images = await Astro.glob("../../assets/fa-images/fa-00/images/*").then(files => {
+const images = await Astro.glob("/src/assets/fa-images/fa-00/images/*").then(files => {
   return files.map(file => file.default);
 });
 

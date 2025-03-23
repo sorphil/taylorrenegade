@@ -3,7 +3,7 @@
 import Header from '../../components/Header.astro';
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
 import MainImage from '../../assets/ow-images/ow-02/ow-02.jpg'
-const images = await Astro.glob("../../assets/ow-images/ow-02/images/*").then(files => {
+const images = await Astro.glob("/src/assets/ow-images/ow-02/images/*").then(files => {
   return files.map(file => file.default);
 });
 
