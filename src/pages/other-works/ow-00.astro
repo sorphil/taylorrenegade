@@ -1,0 +1,33 @@
+---
+
+import Header from "../../components/Header.astro"
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/ow-images/ow-00/ow-00.jpg'
+const images = await Astro.glob("/src/assets/ow-images/ow-00/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`OTHER WORKS`/>
+    <ProjectLayout 
+        title=`Amensalism (OCADU Undergraduate Thesis Work)`
+        year=`2022-23`
+        subtitle=`Materials: Watercolour Paper, Alcohol Markers, Masking Tape, Plaster Wrap, Electrical Wires, Circular Canvases, 
+        Hot Glue, Black paint, Glosses, Mounted on 65" x 45" Half Inch Plywood.`
+        text1=`Amensalism [ey-men-suh-liz-uhm]
+                Noun-Ecology:
+                A biological interaction wherein one organism causes harm to another without any cost or benefits to itself.
+                `
+        text2=` Amensalism is my undergraduate thesis work, which personifies illness and trauma through the lens of a biological wire structure consuming 
+                the human form. It was my way of exploring and revisiting hard moments and realities of my past, and making a physical representation of moments 
+                where it felt like I wouldn't be able to survive these experiences. The self portrait aspects of this piece were done with watercolour paper and 
+                alcohol markers, being integrated into a 3D wire sculpture consuming these pieces. Each individual wire was cut, shaped, and glued onto a 
+                sculpted plaster wrap base, giving the impression of muscle fibres and a more biological look. This piece took 8 months to create, spanning 
+                over 2 thesis semesters`
+        mainImage={MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+

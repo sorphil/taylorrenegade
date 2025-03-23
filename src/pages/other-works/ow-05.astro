@@ -1,0 +1,25 @@
+---
+
+import Header from '../../components/Header.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/ow-images/ow-05/ow-05.jpg'
+const images = await Astro.glob("/src/assets/ow-images/ow-05/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`OTHER WORKS`/>
+    <ProjectLayout 
+        title=`After`
+        year=`2022`
+        subtitle=`Materials: Alcohol Markers, Inks, Acrylic Paint, Sharpie Markers, Watercolour Paper, Canvas`
+        text1=`This piece is a self portrait confronting one of the eternal unknowns, death. Since I was a little kid death has always 
+        terrified me, and as I grew older this fear turned to fascination. This piece ponders the physical decay of what we know, and the 
+        spiritual energy shift of what we don't. While the body decays, does our energy and spirit go along with it? Or is it the start of 
+        a new beginning?`
+        mainImage={MainImage}
+        images={images}
+        gridType=2
+        />
+
+

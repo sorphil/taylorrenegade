@@ -1,0 +1,24 @@
+---
+
+import Header from '../../components/Header.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/ow-images/ow-06/ow-06.png'
+const images = await Astro.glob("/src/assets/ow-images/ow-06/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`OTHER WORKS`/>
+    <ProjectLayout 
+        title=`A Collection of Life Drawings`
+        year=`2023`
+        subtitle=`Materials: Pencil, Multicoloured Pencil Crayons, Alcohol Markers, Ballpoint Pen`
+        text1=`A collection of drawings created within the Life Art section of my MSc Forensic Art & Facial Imaging course, drawn from in class 
+        nude models. We were tasked with creating ecorches of select drawings, as well as making sure to explore multiple different mediums.`
+        mainImage={MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+

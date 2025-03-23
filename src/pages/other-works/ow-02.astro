@@ -1,0 +1,24 @@
+---
+
+import Header from '../../components/Header.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/ow-images/ow-02/ow-02.jpg'
+const images = await Astro.glob("/src/assets/ow-images/ow-02/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`OTHER WORKS`/>
+    <ProjectLayout 
+        title=`A Collection of Portraits`
+        year=`2020 - Present`
+        subtitle=`Materials: Alcohol Markers, Watercolour Paper, Acrylic Paint`
+        text1=`Select collection of my alcohol marker portraits, which are a way for me to practice drawing human likeness and anatomy. 
+        I like to employ elements of exaggeration, through light, shadow, and mixing in unusual colours.`
+        mainImage={MainImage}
+        images={images}
+        gridType=3
+        />
+
+
+
