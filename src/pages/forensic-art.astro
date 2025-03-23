@@ -1,0 +1,143 @@
+---
+import ProjectItem from '../components/projects/ProjectItem.astro';
+import Header from '../components/Header.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import FAImage00 from "../assets/fa-images/fa-00/fa-00-tile.png"
+import FAImage01 from "../assets/fa-images/fa-01/fa-01-tile.png"
+import FAImage02 from "../assets/fa-images/fa-02/fa-02-tile.png"
+import FAImage03 from "../assets/fa-images/fa-03/fa-03-tile.jpg"
+import FAImage04 from "../assets/fa-images/fa-04/fa-04-tile.jpg"
+import FAImage05 from "../assets/fa-images/fa-05/fa-05-tile.jpg"
+import FAImage06 from "../assets/fa-images/fa-06/fa-06-tile.jpg"
+import FAImage07 from "../assets/fa-images/fa-07/fa-07-tile.jpg"
+import FAImageHead from '../assets/fa-images/fa-head.png'
+---
+<Header active="FORENSIC ART"/>
+<MainLayout>
+
+    <div class="forensic-art-head-container">
+        <img class="forensic-art-head-image" src={FAImageHead.src}>
+        <div class="forensic-art-head-text">
+            FORENSIC ART
+        </div>
+    </div>
+    <div class="forensic-art-text">
+        This page includes examples of Forensic Art projects that are available for public viewing. I am trained in the following: <br> 
+        <strong>Craniofacial Approximation, Artificial Age Progression, Composite Sketching (& Eyewitness Cognitive Interviewing), <br> 
+        Postmortem Depiction, Craniofacial Superimposition, Facial Image Comparison</strong>
+        <br/><br>Examples of each are available upon request by emailing taylorrenegade@outlook.com, but some are not suitable for public viewing. 
+    </div>
+	<main class="forensic-art-container">
+        <ProjectItem
+            imageSrc = {FAImage00.src} 
+            name="Master's Forensic Art Dissertation"
+            altText="An image of Taylor alongside her dissertation work"
+            link="/forensic-art/fa-00"
+        />  
+        <ProjectItem
+            imageSrc = {FAImage01.src} 
+            name="CECAS Collaboration Approximation"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/forensic-art/fa-01"
+        />  
+        <ProjectItem
+            imageSrc = {FAImage02.src} 
+            name="Giraffe Skull Reconstruction"
+            altText="An image containing a giraffe ecorche reconstructed from a skull"
+            link="/forensic-art/fa-02"
+        />
+        <ProjectItem
+            imageSrc = {FAImage03.src} 
+            name="Collection of Composite Sketches"
+            altText="An image of a sketch of a man"
+                link="/forensic-art/fa-03"
+        />  
+        <ProjectItem
+            imageSrc = {FAImage04.src} 
+            name="FFS Wax Ecorche"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/forensic-art/fa-04"
+        />  
+        <ProjectItem
+            imageSrc = {FAImage05.src} 
+            name="Collection of Scientific Illustrations"
+            altText="An image containing a giraffe ecorche reconstructed from a skull"
+                link="/forensic-art/fa-05"
+        />
+        <ProjectItem
+            imageSrc = {FAImage06.src} 
+            name="Artificial Age Progression: Child"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+                link="/forensic-art/fa-06"
+        />  
+        <ProjectItem
+            imageSrc = {FAImage07.src} 
+            name="Artificial Age Progression: Adult"
+            altText="An image containing a giraffe ecorche reconstructed from a skull"
+                link="/forensic-art/fa-07"
+        />
+        
+      
+	</main>
+	
+</MainLayout>
+
+<style>
+
+.forensic-art-head-container
+ {
+	width:59.5rem;
+	height: auto;
+	position:relative;
+
+    margin:2rem 0 1rem 0;
+
+ }
+ 
+ .forensic-art-head-image
+ {
+	filter: brightness(40%);
+	width:100%;
+	height: auto;
+ }
+ .forensic-art-head-text
+ {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 3.5rem;
+	text-decoration: none;
+	font-weight: bolder;
+	font-family: "Roboto", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+ }
+
+    .forensic-art-title
+    {
+        padding-top:1rem;
+        text-align: center; 
+
+    }
+    .forensic-art-text
+    {
+        width:59.5rem; 
+        text-align: center; 
+        padding-bottom:2rem;
+    }
+    .forensic-art-container
+    {
+        text-align: center;
+        width: 65rem;
+        padding:2rem 1rem 2rem 1rem;
+        display: grid;
+        box-sizing: border-box;
+        grid-template-columns: repeat(3, 1fr); 
+       
+   
+    }
+ 
+   
+</style>
