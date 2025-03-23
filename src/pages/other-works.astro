@@ -1,0 +1,140 @@
+---
+import ProjectItem from '/src/components/projects/ProjectItem.astro';
+import Header from '/src/components/Header.astro';
+import MainLayout from '/src/layouts/MainLayout.astro';
+import OWImage00 from "/src/assets/ow-images/ow-00/ow-00-tile.jpg"
+import OWImage01 from "/src/assets/ow-images/ow-01/ow-01-tile.png"
+import OWImage02 from "/src/assets/ow-images/ow-02/ow-02-tile.jpg"
+import OWImage03 from "/src/assets/ow-images/ow-03/ow-03-tile.jpg"
+import OWImage04 from "/src/assets/ow-images/ow-04/ow-04-tile.jpg"
+import OWImage05 from "/src/assets/ow-images/ow-05/ow-05-tile.jpg"
+import OWImage06 from "/src/assets/ow-images/ow-06/ow-06-tile.jpg"
+import OWImage07 from "/src/assets/ow-images/ow-07/ow-07-tile.jpg"
+import OWImageHead from '/src/assets/ow-images/ow-head.png'
+---
+<Header active="OTHER WORKS"/>
+<MainLayout>
+
+    <div class="other-works-head-container">
+        <img class="other-works-head-image" src={OWImageHead.src}>
+        <div class="other-works-head-text">
+            OTHER WORKS
+        </div>
+    </div>
+    <div class="other-works-text">
+        This page showcases a selection of my artistic works beyond forensic art, including pieces created during my undergraduate studies in Life Studies. 
+        My work explores human anatomy and experience with expressive compositions through various mediums and techniques. 
+    </div>
+	<main class="other-works-container">
+        <ProjectItem
+            imageSrc = {OWImage00.src} 
+            name="Amensalism"
+            altText="An image of Taylor alongside her dissertation work"
+            link="/other-works/ow-00"
+        />  
+        <ProjectItem
+            imageSrc = {OWImage01.src} 
+            name="Ecorche"
+            altText="An image of Taylor alongside her dissertation work"
+            link="/other-works/ow-01"
+        />  
+        <ProjectItem
+            imageSrc = {OWImage02.src} 
+            name="Collection of Portraits"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/other-works/ow-02"
+        />  
+        <ProjectItem
+            imageSrc = {OWImage03.src} 
+            name="Chemical Existence"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/other-works/ow-03"
+        /> 
+        <ProjectItem
+            imageSrc = {OWImage04.src} 
+            name="Memories That Breathe"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/other-works/ow-04"
+        /> 
+        <ProjectItem
+            imageSrc = {OWImage05.src} 
+            name="After"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/other-works/ow-05"
+        /> 
+        <ProjectItem
+            imageSrc = {OWImage06.src} 
+            name="A Collection of Life Drawings"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/other-works/ow-06"
+        /> 
+        <ProjectItem
+            imageSrc = {OWImage07.src} 
+            name="They Both Die at The End"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/other-works/ow-07"
+        /> 
+      
+	</main>
+	
+</MainLayout>
+
+<style>
+
+.other-works-head-container
+ {
+	width:59.5rem;
+	height: auto;
+	position:relative;
+
+    margin:2rem 0 1rem 0;
+
+ }
+ 
+ .other-works-head-image
+ {
+	filter: brightness(40%);
+	width:100%;
+	height: auto;
+ }
+ .other-works-head-text
+ {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 3.5rem;
+	text-decoration: none;
+	font-weight: bolder;
+	font-family: "Roboto", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+ }
+
+    .other-works-title
+    {
+        padding-top:1rem;
+        text-align: center; 
+
+    }
+    .other-works-text
+    {
+        width:59.5rem; 
+        text-align: center; 
+        padding-bottom:2rem;
+    }
+    .other-works-container
+    {
+        text-align: center;
+        width: 65rem;
+        padding:2rem 1rem 2rem 1rem;
+        display: grid;
+        box-sizing: border-box;
+        grid-template-columns: repeat(3, 1fr); 
+       
+   
+    }
+ 
+   
+</style>
