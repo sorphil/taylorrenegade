@@ -1,0 +1,28 @@
+---
+
+import Header from '../../components/Header.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/fa-images/fa-01/fa-01.png'
+const images = await Astro.glob("/src/assets/fa-images/fa-01/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`FORENSIC ART`/>
+    <ProjectLayout 
+        title=`Craniofacial Approximation: Medieval Woman from Leith, Edinburgh`
+        year=`2024`
+        subtitle=`Materials: Geomagic Freeform, Procreate, Alcohol Markers`
+        text1=`This is a self-directed project as part of my MSc Forensic Art & Facial Imaging course, in collaboration with 
+        the City Of Edinburgh Council Archeological Service (CECAS). I was provided a a 3D scan of a Medieval skull from Leith, 
+        Edinburgh and decided to do a digital 3D Craniofacial Approximation. This project was mainly done in GeoMagic FreeForm, 
+        and then a final texturing was done in 2D digitally overtop of the reconstruction within Procreate, as well as another 
+        traditional drawing done with alcohol markers using the 3D reconstruction as a reference. This portfolio will show each step
+         I took to get to the final product and include all of the relevant research I did to inform my reconstruction. `
+        mainImage = {MainImage}
+        images={images}
+        gridType=2
+        />
+
+
+

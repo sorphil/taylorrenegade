@@ -1,0 +1,29 @@
+---
+
+import Header from '../../components/Header.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/fa-images/fa-03/fa-03.jpg'
+const images = await Astro.glob("/src/assets/fa-images/fa-03/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+<Header active=`FORENSIC ART`/>
+    <ProjectLayout 
+        title=`A Collection of Composite Sketches`
+        year=`2024`
+        subtitle=`Materials: Pencil, Alcohol Markers`
+        text1=`Composite sketching is an important real world application of forensic art, being able to replicate a human likeness 
+        from eyewitness testimony. This is a collection of composite sketches I created as part of my MSc Forensic Art & Facial Imaging 
+        course. The sketches without a witness signature were created looking through the Samantha Steinberg catalogue with written cues
+        provided by my instructor, and the ones with a witness signature were created through simulated cognitive interviews.
+        Cognitive interviews are where a forensic artist talks to and guides the eyewitness through describing the facial features and 
+        likeness of an individual, doing their best at creating a sketch that mimics their memory. These cognitive interviews were 
+        set up by our professor to mimic real world interview dynamics as much as possible.`
+        mainImage = {MainImage}
+        images={images}
+        gridType=2
+        />
+
+
+
