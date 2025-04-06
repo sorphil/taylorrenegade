@@ -3,10 +3,10 @@ import MainLayout from './MainLayout.astro';
 import Header from '../components/Header.astro';
 import ProjectRow from '../components/projects/ProjectRow.astro';
 
-const {title, subtitle, year, text1, text2, mainImage, images, gridType} = Astro.props;
+const {title, subtitle, year, text1, text2, mainImage, images, gridType, description} = Astro.props;
 ---
 
-<MainLayout>
+<MainLayout title={title} description={description}>
     <main class="project-container">
         
          <ProjectRow orientation="alt" 
