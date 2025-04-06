@@ -23,9 +23,9 @@ import logoSiteAlt from "../assets/logo-site-alt.png"
 		<meta property="og:title" content="Taylor Violet Ross | Forensic Artist | Life Artist" />
 		<meta property="og:description" content="Discover Taylor Violet Ross, Canadian based forensic artist and multidisciplinary creative blending science, identity, and art through traditional, digital, and forensic practices." />
 		<meta property="og:image" content={logoSiteAlt.src} />
-	</head>
-	
+	</head>	
 	<body>
+		<slot name="header"/>
 		<slot />
 	</body>
 	<Footer/>

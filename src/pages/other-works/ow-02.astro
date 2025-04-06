@@ -8,8 +8,9 @@ const images = await Astro.glob("/src/assets/ow-images/ow-02/images/*").then(fil
 });
 
 ---
-<Header active=`OTHER WORKS`/>
+
     <ProjectLayout 
+        type="ow"
         title=`A Collection of Portraits`
         year=`2020 - Present`
         subtitle=`Materials: Alcohol Markers, Watercolour Paper, Acrylic Paint`

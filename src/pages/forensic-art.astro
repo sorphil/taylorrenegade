@@ -13,10 +13,9 @@ import FAImage07 from "/src/assets/fa-images/fa-07/fa-07-tile.jpg"
 import FAImageHead from '/src/assets/fa-images/fa-head.png'
 import { Image } from 'astro:assets';
 ---
-<Header active="FORENSIC ART"/>
-<MainLayout 
-    description=>
 
+<MainLayout >
+    <Header active="FORENSIC ART" slot="header"/>
     <div class="forensic-art-head-container">
         <Image src={FAImageHead} alt="Collage of forensic art work containing text 'Forensic Art' as the title." class="forensic-art-head-image" loading="eager"/>
         <div class="forensic-art-head-text">

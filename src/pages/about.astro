@@ -7,9 +7,9 @@ import ImageTwo from '../assets/about/2-1.jpg'
 import ImageThree from '../assets/about/3.jpg'
 
 ---
-<Header active=`ABOUT`/>
-<MainLayout>
 
+<MainLayout>
+    <Header active=`ABOUT` slot="header"/>
 	<main class=`about-container`>
         <AboutRow orientation=`normal` 
             image1={ImageOne}

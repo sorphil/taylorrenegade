@@ -3,10 +3,12 @@ import MainLayout from './MainLayout.astro';
 import Header from '../components/Header.astro';
 import ProjectRow from '../components/projects/ProjectRow.astro';
 
-const {title, subtitle, year, text1, text2, mainImage, images, gridType, description} = Astro.props;
+const {type, title, subtitle, year, text1, text2, mainImage, images, gridType, description} = Astro.props;
+let active = type == "fa" ? "FORENSIC ART" : "OTHER WORKS"
 ---
 
 <MainLayout title={title} description={description}>
+    <Header active={active} slot="header"/>
     <main class="project-container">
         
          <ProjectRow orientation="alt" 
