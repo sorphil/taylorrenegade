@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://taylorrenegade.ca/sitemap-index.xml
