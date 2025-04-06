@@ -4,6 +4,7 @@ import '/src/styles/global.css';
 
 import logoSiteAlt from "../assets/logo-site-alt.png"
 const {title, description} = Astro.props;
+const ogTitle = title === "" ? "Taylor Violet Ross | Forensic Artist | Life Artist" : title;
 ---
 
 <!doctype html>
@@ -13,7 +14,7 @@ const {title, description} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{ogTitle}</title>
 		<script src="https://kit.fontawesome.com/9eb3f8336e.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,7 @@ const {title, description} = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<meta property="og:title" content={title == ""? "Taylor Violet Ross | Forensic Artist | Life Artist": title} />
+		<meta property="og:title" content={ogTitle} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={logoSiteAlt.src} />
 	</head>
