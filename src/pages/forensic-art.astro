@@ -2,6 +2,7 @@
 import ProjectItem from '/src/components/projects/ProjectItem.astro';
 import Header from '/src/components/Header.astro';
 import MainLayout from '/src/layouts/MainLayout.astro';
+import FAImage0 from "/src/assets/fa-images/fa-0/fa-0-tile.webp"
 import FAImage00 from "/src/assets/fa-images/fa-00/fa-00-tile.webp"
 import FAImage01 from "/src/assets/fa-images/fa-01/fa-01-tile.webp"
 import FAImage02 from "/src/assets/fa-images/fa-02/fa-02-tile.webp"
@@ -29,6 +30,7 @@ import { Image } from 'astro:assets';
         <br/><br>Examples of each are available upon request by emailing taylorrenegade@outlook.com, but some are not suitable for public viewing. 
     </div>
 	<main class="forensic-art-container">
+   
         <ProjectItem
             imageSrc = {FAImage00} 
             name="Master's Forensic Art Dissertation"
@@ -36,6 +38,13 @@ import { Image } from 'astro:assets';
             link="/forensic-art/fa-00"
             loading="eager"
         />  
+        <ProjectItem
+        imageSrc = {FAImage0} 
+        name="3D Manual Craniofacial Approximation"
+        altText="Taylor Ross standing beside her dissertation work."
+        link="/forensic-art/fa-08"
+        loading="eager"
+    />  
         <ProjectItem
             imageSrc = {FAImage01} 
             name="CECAS Collaboration Approximation"

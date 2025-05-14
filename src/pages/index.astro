@@ -5,6 +5,7 @@ import Header from '/src/components/Header.astro';
 import FAImageLink from '/src/assets/home/fa-img.webp'
 import OWImageLink from '/src/assets/home/ow-img.webp'
 import COMImageLink from '/src/assets/home/com-img.webp'
+import Image from 'astro/components/Image.astro';
 ---
 
 
@@ -13,19 +14,19 @@ import COMImageLink from '/src/assets/home/com-img.webp'
 	<main>
 		<section class ="index-about">
 			<a class="index-link"  href="/forensic-art/">
-				<img class="index-link-image" src={FAImageLink.src}>
+				<Image width="1550" height="620" src={FAImageLink} alt="Collage of forensic art and projects with the text Forensic Art serving as a link to the page"  class="index-link-image"/>
 				<div class="index-link-text">
 					FORENSIC ART
 				</div>
 			</a>
 			<a class="index-link"  href="/other-works/">
-				<img  class="index-link-image" src={OWImageLink.src}>
+				<Image width="1550" height="620" src={OWImageLink} alt="Collage of various artworks using mixed media  with the text Other Works serving as a link to the page"  class="index-link-image"/>
 				<div class="index-link-text">
 					OTHER WORKS
 				</div>
 			</a>
 			<a class="index-link" href="/commissions/">
-				<img  class="index-link-image" src={COMImageLink.src}>
+				<Image width="1550" height="620" src={COMImageLink} alt="Collage of painted portraits with the text Commissions serving as a link to the page" class="index-link-image"/>
 				<div class="index-link-text">
 					COMMISSIONS
 				</div>

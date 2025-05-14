@@ -1,0 +1,36 @@
+---
+
+import Header from '../../components/Header.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/fa-images/fa-0/fa-0.webp'
+const images = await Astro.glob("/src/assets/fa-images/fa-0/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+
+    <ProjectLayout 
+        type="fa"
+        title=`3D Manual Craniofacial Approximation`
+        year=`2025`
+        subtitle=`Materials: 3D Printed Skull, Sculpting Wax, Alcohol Markers, Acrylic Paint, Procreate`
+        text1=`Craniofacial approximation of a skull from a collection of retired medical skeletons within the UK. 
+        The skull was 3D printed, with 3D manual approximation processes applied. 2D texturings were done in both
+         alcohol markers & paint as well as digital texturings within Procreate. Special thanks Susan Elaine Jones 
+         (susanelainejones.com) for providing vital information as well as for doing such an amazing job 3D scanning 
+         the skull.`
+        
+        text2=`"Human skull B3R7" (https://skfb.ly/6RHxZ) by SusanElaineJones is licensed under
+         Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)`
+        mainImage={MainImage}
+        images={images}
+        gridType=2
+          description=`This project addresses the challenges of craniofacial approximations in forensic science, particularly when identifying transgender individuals. 
+                      It proposes new standards for creating trans-inclusive approximations, focusing on trans-feminine identities, which are 
+                      currently underrepresented in forensic research. By comparing masculine, feminine, and gender-neutral standards applied 
+                      to the same male skull, the project aims to establish guidelines that respect and accurately reflect trans-feminine identities 
+                      in forensic art.`
+        />
+
+
+
