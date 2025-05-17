@@ -2,7 +2,7 @@
 
 import Header from '../../components/Header.astro';
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
-import MainImage from '../../assets/fa-images/fa-0/fa-0.webp'
+import MainImage from '../../assets/fa-images/fa-0/fa-0-tile.webp'
 const images = await Astro.glob("/src/assets/fa-images/fa-0/images/*").then(files => {
   return files.map(file => file.default);
 });
@@ -24,7 +24,7 @@ const images = await Astro.glob("/src/assets/fa-images/fa-0/images/*").then(file
          Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)`
         mainImage={MainImage}
         images={images}
-        gridType=2
+        gridType=3
           description=`This project addresses the challenges of craniofacial approximations in forensic science, particularly when identifying transgender individuals. 
                       It proposes new standards for creating trans-inclusive approximations, focusing on trans-feminine identities, which are 
                       currently underrepresented in forensic research. By comparing masculine, feminine, and gender-neutral standards applied 
