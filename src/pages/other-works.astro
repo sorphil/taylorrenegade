@@ -2,14 +2,15 @@
 import ProjectItem from '/src/components/projects/ProjectItem.astro';
 import Header from '/src/components/Header.astro';
 import MainLayout from '/src/layouts/MainLayout.astro';
-import OWImage00 from "/src/assets/ow-images/ow-00/ow-00-tile.webp"
-import OWImage01 from "/src/assets/ow-images/ow-01/ow-01-tile.webp"
-import OWImage02 from "/src/assets/ow-images/ow-02/ow-02-tile.webp"
-import OWImage03 from "/src/assets/ow-images/ow-03/ow-03-tile.webp"
-import OWImage04 from "/src/assets/ow-images/ow-04/tile.webp"
-import OWImage05 from "/src/assets/ow-images/ow-05/ow-05-tile.webp"
-import OWImage06 from "/src/assets/ow-images/ow-06/ow-06-tile.webp"
-import OWImage07 from "/src/assets/ow-images/ow-07/ow-07-tile.webp"
+import AmensalismTile from "/src/assets/ow-images/amensalism/amensalism-tile.webp"
+import ParasitismTile from "/src/assets/ow-images/parasitism/parasitism-tile.webp"
+import EcorcheTile from "/src/assets/ow-images/ecorche/ecorche-tile.webp"
+import PortraitsTile from "/src/assets/ow-images/portraits/portraits-tile.webp"
+import ChemicalTile from "/src/assets/ow-images/chemical/chemical-tile.webp"
+import MemoriesTile from "/src/assets/ow-images/memories/memories-tile.webp"
+import AfterTile from "/src/assets/ow-images/after/after-tile.webp"
+import LifeDrawingsTile from "/src/assets/ow-images/lifedrawings/lifedrawings-tile.webp"
+import TBDATETile from "/src/assets/ow-images/tbdate/tbdate-tile.webp"
 import OWImageHead from '/src/assets/ow-images/ow-head.webp'
 import { Image } from 'astro:assets';
 ---
@@ -28,59 +29,66 @@ import { Image } from 'astro:assets';
     </div>
 	<main class="other-works-container">
         <ProjectItem
-            imageSrc = {OWImage00} 
+            imageSrc = {AmensalismTile} 
             name="Amensalism"
-            altText="An image of Taylor alongside her dissertation work"
-            link="/other-works/ow-00"
+            altText="An image of a woman covered and restricted by wires resembling muscles"
+            link="/other-works/amensalism"
+            loading="eager"
+        />  
+         <ProjectItem
+            imageSrc = {ParasitismTile} 
+            name="Parasitism"
+            altText="An image of a woman covered and restricted by wires resembling muscles"
+            link="/other-works/parasitism"
             loading="eager"
         />  
         <ProjectItem
-            imageSrc = {OWImage01} 
+            imageSrc = {EcorcheTile} 
             name="Ecorche"
-            altText="An image of Taylor alongside her dissertation work"
-            link="/other-works/ow-01"
+            altText="An image of a woman displaying the inner musculature structure on a section of her face"
+            link="/other-works/ecorche"
             loading="eager"
         />  
         <ProjectItem
-            imageSrc = {OWImage02} 
+            imageSrc = {PortraitsTile} 
             name="Collection of Portraits"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
-            link="/other-works/ow-02"
+            link="/other-works/collection-of-portraits"
             loading="eager"
         />  
         <ProjectItem
-            imageSrc = {OWImage03} 
+            imageSrc = {ChemicalTile} 
             name="Chemical Existence"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
-            link="/other-works/ow-03"
+            link="/other-works/chemical-existence"
             loading="lazy"
         /> 
         <ProjectItem
-            imageSrc = {OWImage04} 
+            imageSrc = {MemoriesTile} 
             name="Memories That Breathe"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
-            link="/other-works/ow-04"
+            link="/other-works/memories-that-breathe"
             loading="lazy"
         /> 
         <ProjectItem
-            imageSrc = {OWImage05} 
+            imageSrc = {AfterTile} 
             name="After"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
-            link="/other-works/ow-05"
+            link="/other-works/after"
             loading="lazy"
             /> 
         <ProjectItem
-            imageSrc = {OWImage06} 
+            imageSrc = {LifeDrawingsTile} 
             name="A Collection of Life Drawings"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
-            link="/other-works/ow-06"
+            link="/other-works/collection-of-life-drawings"
             loading="lazy"
             /> 
         <ProjectItem
-            imageSrc = {OWImage07} 
+            imageSrc = {TBDATETile} 
             name="They Both Die at The End"
             altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
-            link="/other-works/ow-07"
+            link="/other-works/they-both-die-at-the-end"
             loading="lazy"
             /> 
       

@@ -2,15 +2,16 @@
 import ProjectItem from '/src/components/projects/ProjectItem.astro';
 import Header from '/src/components/Header.astro';
 import MainLayout from '/src/layouts/MainLayout.astro';
-import FAImage0 from "/src/assets/fa-images/fa-0/fa-0-tile.webp"
-import FAImage00 from "/src/assets/fa-images/fa-00/fa-00-tile.webp"
-import FAImage01 from "/src/assets/fa-images/fa-01/fa-01-tile.webp"
-import FAImage02 from "/src/assets/fa-images/fa-02/fa-02-tile.webp"
-import FAImage03 from "/src/assets/fa-images/fa-03/fa-03-tile.webp"
-import FAImage04 from "/src/assets/fa-images/fa-04/fa-04-tile.webp"
-import FAImage05 from "/src/assets/fa-images/fa-05/fa-05-tile.webp"
-import FAImage06 from "/src/assets/fa-images/fa-06/fa-06-tile.webp"
-import FAImage07 from "/src/assets/fa-images/fa-07/fa-07-tile.webp"
+import CranApproxTile from "/src/assets/fa-images/cranapprox/cranapprox-tile.webp"
+import MastersTile from "/src/assets/fa-images/masters/masters-00.webp"
+import CECASTile from "/src/assets/fa-images/cecas/cecas-00.webp"
+import CECASNewTile from "/src/assets/fa-images/cecasnew/cecasnew.webp"
+import GiraffeTile from "/src/assets/fa-images/giraffe/giraffe-tile.webp"
+import CompositeTile from "/src/assets/fa-images/composite/composite-tile.webp"
+import FFSTile from "/src/assets/fa-images/ffs/ffs-tile.webp"
+import ScientificTile from "/src/assets/fa-images/scientific/scientific-tile.webp"
+import AgeProgChildTile from "/src/assets/fa-images/ageprogchild/ageprogchild-tile.webp"
+import AgeProgAdultTile from "/src/assets/fa-images/ageprogadult/ageprogadult-tile.webp"
 import FAImageHead from '/src/assets/fa-images/fa-head.webp'
 import { Image } from 'astro:assets';
 ---
@@ -32,66 +33,74 @@ import { Image } from 'astro:assets';
 	<main class="forensic-art-container">
    
         <ProjectItem
-            imageSrc = {FAImage00} 
+            imageSrc = {MastersTile} 
             name="Master's Forensic Art Dissertation"
             altText="Taylor Ross standing beside her dissertation work."
-            link="/forensic-art/fa-00"
+            link="/forensic-art/masters-forensic-art-dissertation"
             loading="eager"
         />  
-        <ProjectItem
-        imageSrc = {FAImage0} 
-        name="3D Manual Craniofacial Approximation"
-        altText="Taylor Ross standing beside her dissertation work."
-        link="/forensic-art/fa-08"
+         <ProjectItem
+        imageSrc = {CECASNewTile} 
+        name="(Updated) CECAS Approximation"
+        altText="A physical painting containing an illustration of a woman approximated from a skull of a woman from Leith, Edinburgh."
+        link="/forensic-art/updated-cecas-collaboration-approximation"
         loading="eager"
     />  
         <ProjectItem
-            imageSrc = {FAImage01} 
-            name="CECAS Collaboration Approximation"
-            altText="An illustration of a woman approximated from a skull of a woman from Leith, Edinburgh."
-            link="/forensic-art/fa-01"
-            loading="eager"
-        />  
-        <ProjectItem
-            imageSrc = {FAImage02} 
+        imageSrc = {CranApproxTile} 
+        name="3D Manual Craniofacial Approximation"
+        altText="Taylor Ross standing beside her dissertation work."
+        link="/forensic-art/3d-manual-craniofacial-approximation"
+        loading="eager"
+    />  
+     <ProjectItem
+            imageSrc = {GiraffeTile} 
             name="Giraffe Skull Reconstruction"
             altText="A giraffe ecorche reconstructed from a skull exhibiting the different layers of muscle, fat and bones underneath its skin."
-            link="/forensic-art/fa-02"
+            link="/forensic-art/giraffe-skull-reconstruction"
             loading="eager"
         />
         <ProjectItem
-            imageSrc = {FAImage03} 
+            imageSrc = {CECASTile} 
+            name="CECAS Collaboration Approximation"
+            altText="An illustration of a woman approximated from a skull of a woman from Leith, Edinburgh."
+            link="/forensic-art/cecas-collaboration-approximation"
+            loading="eager"
+        />  
+       
+        <ProjectItem
+            imageSrc = {CompositeTile} 
             name="Collection of Composite Sketches"
             altText="A forensic drawing or sketch of a man."
-            link="/forensic-art/fa-03"
+            link="/forensic-art/collection-of-composite-sketches"
             loading="late"
         />  
         <ProjectItem
-            imageSrc = {FAImage04} 
+            imageSrc = {FFSTile} 
             name="FFS Wax Ecorche"
             altText="A sculpture/ecorche of a woman undergoing facial feminization surgery exhibiting the different areas of surgery."
-            link="/forensic-art/fa-04"
+            link="/forensic-art/ffs-wax-ecorche"
             loading="late"
         />  
         <ProjectItem
-            imageSrc = {FAImage05} 
+            imageSrc = {ScientificTile} 
             name="Collection of Scientific Illustrations"
             altText="A labelled diagram or illustration of a left hand."
-            link="/forensic-art/fa-05"
+            link="/forensic-art/collection-of-scientific-illustrations"
             loading="late"
         />
         <ProjectItem
-            imageSrc = {FAImage06} 
+            imageSrc = {AgeProgChildTile} 
             name="Artificial Age Progression: Child"
             altText="An illustration of a child."
-            link="/forensic-art/fa-06"
+            link="/forensic-art/artificial-age-progression-child"
             loading="late"
         />  
         <ProjectItem
-            imageSrc = {FAImage07} 
+            imageSrc = {AgeProgAdultTile} 
             name="Artificial Age Progression: Adult"
             altText="A man artificially aged up, with each illustration placed side by side to show the differences between the different ages."
-            link="/forensic-art/fa-07"
+            link="/forensic-art/artificial-age-progression-adult"
             loading="late"
         />
         
