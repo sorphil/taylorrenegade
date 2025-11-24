@@ -16,9 +16,9 @@ import { Image } from 'astro:assets';
     <Header active="COMMISSIONS" slot="header"/>
     <div class="commissions-head-container">
         <img class="commissions-head-image" src={COMImageHead.src}>
-        <div class="commissions-head-text">
+        <h1 class="commissions-head-text">
             COMMISSIONS
-        </div>
+        </h1>
     </div>
 	<main class="commissions-main-container">
       <section>
@@ -154,7 +154,7 @@ import { Image } from 'astro:assets';
  .commissions-head-text
  {
 	position: absolute;
-	top: 50%;
+		top:35%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;

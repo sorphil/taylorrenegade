@@ -20,9 +20,9 @@ import { Image } from 'astro:assets';
     <Header active="FORENSIC ART" slot="header"/>
     <div class="forensic-art-head-container">
         <Image src={FAImageHead} alt="Collage of forensic art work containing text 'Forensic Art' as the title." class="forensic-art-head-image" loading="eager"/>
-        <div class="forensic-art-head-text">
+        <h1 class="forensic-art-head-text">
             FORENSIC ART
-        </div>
+        </h1>
     </div>
     <div class="forensic-art-text">
         This page includes examples of Forensic Art projects that are available for public viewing. I am trained in the following: <br> 
@@ -124,7 +124,7 @@ import { Image } from 'astro:assets';
  .forensic-art-head-text
  {
 	position: absolute;
-	top: 50%;
+	top:35%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
