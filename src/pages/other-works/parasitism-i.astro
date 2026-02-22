@@ -1,0 +1,24 @@
+---
+
+import Header from '/src/components/Header.astro';
+import ProjectLayout from '/src/layouts/ProjectLayout.astro';
+import MainImage from '/src/assets/ow-images/parasitism1/parasitism-tile.webp'
+const images = await Astro.glob("/src/assets/ow-images/parasitism1/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+
+    <ProjectLayout 
+        type="ow"
+        title=`PARASITISM I`
+        year=`2025`
+        subtitle=`Materials: Oil Paint, Electrical Wire, Plaster Wrap, Masking Tape on 16” Diameter Circular Canvas `
+        text1=`Parasitism I is part of a series of 5 works, with this one focusing on an ecorché self portrait of my face. All pieces focus on both a skin layer, as well as an electrical wire sculptural muscle section. The Parasitism series is an exploration of my own experiences with how mental health and madness has shaped who I am. At times I feel disconnected from my own body, unsure of what about myself is my own and what is distorted by illness. I use electrical wires to mimic muscle fibres, an uncanny and inhuman mimic.`
+        mainImage={MainImage}
+        images={images}
+        gridType=2
+        />
+
+
+

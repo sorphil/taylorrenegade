@@ -3,7 +3,9 @@ import ProjectItem from '/src/components/projects/ProjectItem.astro';
 import Header from '/src/components/Header.astro';
 import MainLayout from '/src/layouts/MainLayout.astro';
 import AmensalismTile from "/src/assets/ow-images/amensalism/amensalism-tile.webp"
-import ParasitismTile from "/src/assets/ow-images/parasitism/parasitism-tile.webp"
+import Parasitism1Tile from "/src/assets/ow-images/parasitism1/parasitism-tile.webp"
+import Parasitism2Tile from "/src/assets/ow-images/parasitism2/parasitism-tile.webp"
+import Parasitism3Tile from "/src/assets/ow-images/parasitism3/parasitism-tile.webp"
 import EcorcheTile from "/src/assets/ow-images/ecorche/ecorche-tile.webp"
 import PortraitsTile from "/src/assets/ow-images/portraits/portraits-tile.webp"
 import ChemicalTile from "/src/assets/ow-images/chemical/chemical-tile.webp"
@@ -11,7 +13,9 @@ import MemoriesTile from "/src/assets/ow-images/memories/memories-tile.webp"
 import AfterTile from "/src/assets/ow-images/after/after-tile.webp"
 import LifeDrawingsTile from "/src/assets/ow-images/lifedrawings/lifedrawings-tile.webp"
 import TBDATETile from "/src/assets/ow-images/tbdate/tbdate-tile.webp"
+import DisTile from "/src/assets/ow-images/disintegration/disintegration-tile.webp"
 import OWImageHead from '/src/assets/ow-images/ow-head.webp'
+import AlisenTile from "/src/assets/ow-images/alisen/alisen-tile.webp"
 import { Image } from 'astro:assets';
 ---
 
@@ -28,27 +32,44 @@ import { Image } from 'astro:assets';
         My work explores human anatomy and experience with expressive compositions through various mediums and techniques. 
     </div>
 	<main class="other-works-container">
-        <ProjectItem
+      
+         <ProjectItem
+            imageSrc = {Parasitism1Tile} 
+            name="Parasitism I"
+            altText="An image of a woman covered and restricted by wires resembling muscles"
+            link="/other-works/parasitism-i"
+            loading="eager"
+        />  
+          <ProjectItem
+            imageSrc = {Parasitism2Tile} 
+            name="Parasitism II"
+            altText="An image of a woman covered and restricted by wires resembling muscles"
+            link="/other-works/parasitism-ii"
+            loading="eager"
+        />  
+         <ProjectItem
+            imageSrc = {Parasitism3Tile} 
+            name="Parasitism III"
+            altText="An image of a woman covered and restricted by wires resembling muscles"
+            link="/other-works/parasitism-iii"
+            loading="eager"
+        />  
+      
+            <ProjectItem
+            imageSrc = {AlisenTile} 
+            name="My Friend Alisen"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/other-works/my-friend-alisen"
+            loading="lazy"
+            /> 
+                     <ProjectItem
             imageSrc = {AmensalismTile} 
             name="Amensalism"
             altText="An image of a woman covered and restricted by wires resembling muscles"
             link="/other-works/amensalism"
             loading="eager"
         />  
-         <ProjectItem
-            imageSrc = {ParasitismTile} 
-            name="Parasitism"
-            altText="An image of a woman covered and restricted by wires resembling muscles"
-            link="/other-works/parasitism"
-            loading="eager"
-        />  
-        <ProjectItem
-            imageSrc = {EcorcheTile} 
-            name="Ecorche"
-            altText="An image of a woman displaying the inner musculature structure on a section of her face"
-            link="/other-works/ecorche"
-            loading="eager"
-        />  
+        
         <ProjectItem
             imageSrc = {PortraitsTile} 
             name="Collection of Portraits"
@@ -56,6 +77,20 @@ import { Image } from 'astro:assets';
             link="/other-works/collection-of-portraits"
             loading="eager"
         />  
+   <ProjectItem
+            imageSrc = {EcorcheTile} 
+            name="Ecorche"
+            altText="An image of a woman displaying the inner musculature structure on a section of her face"
+            link="/other-works/ecorche"
+            loading="eager"
+        />  
+           <ProjectItem
+            imageSrc = {DisTile} 
+            name="Disintegration"
+            altText="An image containing an illustrated woman approximated from a skull of a woman from Leith, Edinburgh"
+            link="/other-works/disintegration"
+            loading="lazy"
+            /> 
         <ProjectItem
             imageSrc = {ChemicalTile} 
             name="Chemical Existence"
@@ -91,7 +126,8 @@ import { Image } from 'astro:assets';
             link="/other-works/they-both-die-at-the-end"
             loading="lazy"
             /> 
-      
+    
+        
 	</main>
 	
 </MainLayout>
@@ -103,7 +139,7 @@ import { Image } from 'astro:assets';
 	width:59.5rem;
 	height: auto;
 	position:relative;
-
+    
     margin:2rem 0 1rem 0;
 
  }

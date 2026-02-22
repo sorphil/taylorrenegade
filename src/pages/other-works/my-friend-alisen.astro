@@ -1,0 +1,24 @@
+---
+
+import Header from '../../components/Header.astro';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import MainImage from '../../assets/ow-images/alisen/alisen-tile.webp'
+const images = await Astro.glob("/src/assets/ow-images/alisen/images/*").then(files => {
+  return files.map(file => file.default);
+});
+
+---
+
+    <ProjectLayout 
+        type="ow"
+        title=`My Friend Alisen`
+        year=`2025`
+        subtitle=`Materials: Alcohol markers on 12x18 watercolour paper `
+        text1=`Ecorché style self portrait commission by my friend Alisen, to commemorate her experience with brain surgery. The surgery was to alleviate symptoms of her temporal lobe epilepsy`
+        mainImage={MainImage}
+        images={images}
+        gridType=2
+        />
+
+
+
